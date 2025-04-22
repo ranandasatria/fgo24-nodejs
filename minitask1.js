@@ -3,7 +3,7 @@ const path = require('path')
 
 async function createFile(fileName) {
     try{
-        const content = "Hello\n"
+        const content = ""
         await fs.writeFile(fileName, content)
         console.log("write file success")
     }catch(err){
@@ -25,7 +25,7 @@ const listMusic = [
 ]
 
 listMusic.forEach(music=>{
-    createFile(path.join("music", `${music}.mp3`))
+    createFile(path.join("test", `${music}.mp3`))
 })
 
 // createFile(path.join("music", "example.txt"))
