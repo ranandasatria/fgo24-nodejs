@@ -18,7 +18,7 @@ async function getMusic(){
         const fetchData = await fetch(url)
         const data = await fetchData.json()
 
-        const dibalik = data.map(item => item.split(" - ").reverse().join())
+        const dibalik = data.map(item => item.split(" - ").reverse().join(" - "))
 
         dibalik.forEach(music=>{
             createFile(path.join("music", `${music}.mp3`))
